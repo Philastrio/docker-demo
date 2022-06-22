@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v2/', 6b43f31e-6618-43ae-8736-9bc73f991559) {
+     docker.withRegistry('https://index.docker.io/v2/', "6b43f31e-6618-43ae-8736-9bc73f991559") {
        def app = docker.build("philastrio/docker-nodejs-demo:${commit_id}", '.').push()
      }
    }
